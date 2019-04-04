@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Photo.create(title: 'Waterfall', owner: 'Jon', vote_count: 12)
+Photo.create(title: 'Sunset', owner: 'Bob', vote_count: 12)
+Photo.create(title: 'Ocean', owner: 'Nick', vote_count: 0)
+Photo.create(title: 'Mountain', owner: 'Nick', vote_count: 0)
+Photo.create(title: 'Forest', owner: 'Taylor', vote_count: 0)
+Photo.create(title: 'Sea', owner: 'Craig')

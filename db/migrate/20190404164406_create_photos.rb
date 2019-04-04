@@ -1,0 +1,11 @@
+class CreatePhotos < ActiveRecord::Migration[5.2]
+  def change
+    create_table :photos do |t|
+      t.string :title
+      t.string :owner
+      t.integer :vote_count, :default => 0
+
+      t.timestamps
+    end
+  end
+end
