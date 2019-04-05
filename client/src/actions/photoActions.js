@@ -6,7 +6,7 @@ export function fetchPhotos() {
             .then(res => {
                 return res.json()
             }).then(responseJson => {
-                dispatch({ type: 'FETCH_PHOTOS', payload: responseJson.photos })
+                dispatch({ type: 'FETCH_PHOTOS', payload: responseJson })
             })
     }
 }

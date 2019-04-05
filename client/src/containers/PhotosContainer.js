@@ -16,7 +16,7 @@ class PhotosContainer extends Component {
   render(){
     return (
       <div>
-      <Photos photo={this.props.photos}/>
+      <Photos photos={this.props.photos}/>
       </div>
 
     )

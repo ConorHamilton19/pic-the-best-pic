@@ -4,6 +4,7 @@ class Photo extends Component {
   render() {
     return(
       <div>
+        {this.props.photo.title}
       </div>
     )
   }
