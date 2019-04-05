@@ -1,21 +1,30 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { fetchPhotos } from '../actions/photoActions'
 
 import Photos from '../components/Photos'
 
 
 class PhotosContainer extends Component {
 
-  state = {
-    photo: ""
+  componentDidMount() {
+  if (this.props.photos.length === 0) {
+    this.props.fetchPhotos()
   }
+}
+
   render(){
     return (
       <div>
-      <Photos photo={this.state.photo}/>
+      <Photos photo={this.props.photos}/>
       </div>
 
     )
   }
 }
 
-export default PhotosContainer
+function mapStateToProps(state) {
+  return {photos: state.photos}
+}
+
+export default connect(mapStateToProps, { fetchPhotos }) (PhotosContainer)
