@@ -1,1 +1,6 @@
 
+.PhotoCard {
+   margin: 110px;
+   display:inline-block;
+   vertical-align:text-top
+}

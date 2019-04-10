@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Photo extends Component {
   render() {
     return(
-      <div>
+      <div className="PhotoCard">
         {this.props.photo.title}
       </div>
     )
