@@ -16,7 +16,7 @@ class PhotosContainer extends Component {
   render(){
     return (
       <div>
-      <Photos photos={this.props.photos}/>
+      <Photos photos={this.props.photos} />
       </div>
 
     )
@@ -27,4 +27,4 @@ function mapStateToProps(state) {
   return {photos: state.photos}
 }
 
-export default connect(mapStateToProps, { fetchPhotos }) (PhotosContainer)
+export default connect(mapStateToProps, { fetchPhotos}) (PhotosContainer)

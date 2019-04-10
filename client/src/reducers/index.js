@@ -11,7 +11,18 @@ const initialState = {
         return Object.assign({}, state, { loading: true })
 
         case 'FETCH_PHOTOS':
-          return {photos: action.payload}
+        return {photos: action.payload}
+
+        // case "INCREASE_VOTE":
+        // return {
+        //   ...state,
+        //   photos: state.photos.map(photo => photo.id === action.id ?
+        //       // transform the one with a matching id
+        //       { ...photo, vote_count: vote_count += 1 } :
+        //       // otherwise return original photo
+        //       photo
+        //   )
+        // };
 
       default: return state
 
