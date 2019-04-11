@@ -1,13 +1,13 @@
 class PhotosController < ApplicationController
   def index
-    photos = Photo.order("created_at DESC")
+    photos = Photo.order("RANDOM()").limit(4)
     render json: photos
   end
 
   def show
     photo = Photo.find(params[:id])
     render json: photo
-  end 
+  end
 
   def create
     photo = Photo.create(photo_params)
@@ -16,7 +16,7 @@ class PhotosController < ApplicationController
 
   def update
     photo = Photo.find(params[:id])
-    photo.update_attributes(photo_params)
+    photo.update(photo_params)
     render json: photo
   end
 
@@ -28,6 +28,6 @@ class PhotosController < ApplicationController
 
   private
     def photo_params
-      params.require(:photo).permit(:title, :owner, :vote_count)
+      params.require(:photo).permit(:id, :title, :owner, :vote_count)
     end
 end

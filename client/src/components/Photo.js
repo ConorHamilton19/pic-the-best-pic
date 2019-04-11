@@ -6,7 +6,8 @@ class Photo extends Component {
 
   handleClick = (e) => {
     e.preventDefault()
-    this.props.increaseVote(this.props.photo.id)
+    this.props.photo.vote_count += 1
+    this.props.increaseVote(this.props.photo)
   }
 
   render() {

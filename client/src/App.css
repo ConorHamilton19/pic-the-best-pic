@@ -4,3 +4,9 @@
    display:inline-block;
    vertical-align:text-top
 }
+
+.Photos {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}

@@ -11,7 +11,7 @@ class Photos extends Component {
 
 
     return(
-      <div className="photos">
+      <div className="Photos">
       <ul>{photos}</ul>
       </div>
     )
