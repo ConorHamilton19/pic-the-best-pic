@@ -14,3 +14,15 @@
 .PhotosContainer {
   box-shadow: 0 4px 2px -2px gray;
 }
+
+.Ratings {
+  display:block;
+  float:left;
+  width:300px;
+  height:150px;
+  padding: 10px;
+}
+
+.RatingCard {
+
+}

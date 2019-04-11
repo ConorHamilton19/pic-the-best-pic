@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-import Photo from './Photo'
+import Rating from './Rating'
 
 class Ratings extends Component {
 
 
   render() {
 
-    const ratings = this.props.photos.map(photo => <Photo key={photo.id} photo={photo}/>)
+    const ratings = this.props.photos.map(photo => <Rating key={photo.id} photo={photo}/>)
 
 
     return(
@@ -18,4 +18,4 @@ class Ratings extends Component {
   }
 }
 
-export default Photos
+export default Ratings

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { fetchPhotos } from '../actions/photoActions'
 
 
 import Ratings from '../components/Ratings'
@@ -27,4 +28,4 @@ function mapStateToProps(state) {
   return {photos: state.photos}
 }
 
-export default connect(mapStateToProps) (RatingsContainer)
+export default connect(mapStateToProps, { fetchPhotos }) (RatingsContainer)
