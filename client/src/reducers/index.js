@@ -18,7 +18,7 @@ const initialState = {
         //   ...state,
         //   photos: state.photos.map(photo => photo.id === action.id ?
         //       // transform the one with a matching id
-        //       { ...photo, vote_count: vote_count += 1 } :
+        //       { ...photo, action.payload} :
         //       // otherwise return original photo
         //       photo
         //   )

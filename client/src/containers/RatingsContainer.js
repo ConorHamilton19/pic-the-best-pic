@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchPhotos } from '../actions/photoActions'
-
-import Photos from '../components/Photos'
 
 
-class PhotosContainer extends Component {
+import Ratings from '../components/Ratings'
+
+
+class RatingsContainer extends Component {
 
   componentDidMount() {
   if (this.props.photos.length === 0) {
@@ -15,8 +15,8 @@ class PhotosContainer extends Component {
 
   render(){
     return (
-      <div className="PhotosContainer">
-      <Photos photos={this.props.photos} />
+      <div className="RatingsContainer">
+      <Ratings photos={this.props.photos} />
       </div>
 
     )
@@ -27,4 +27,4 @@ function mapStateToProps(state) {
   return {photos: state.photos}
 }
 
-export default connect(mapStateToProps, { fetchPhotos }) (PhotosContainer)
+export default connect(mapStateToProps) (RatingsContainer)

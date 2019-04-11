@@ -12,9 +12,7 @@ export function fetchPhotos() {
 }
 
 export function increaseVote(photo) {
-  console.log(photo)
     return function (dispatch) {
-        dispatch({ type: 'LOADING_PHOTOS' })
         return fetch(`http://localhost:3000/api/v1/photos/${photo.id}`, {
           method: 'PATCH',
           headers: {
@@ -22,6 +20,11 @@ export function increaseVote(photo) {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify(photo)
-            })  
-            }
-          }
+            })
+            .then(res => {
+                return res.json()
+            }).then(responseJson => {
+                dispatch({ type: 'INCREASE_VOTE', payload: responseJson })
+            })
+    }
+}
