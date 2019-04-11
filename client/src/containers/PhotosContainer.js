@@ -27,4 +27,4 @@ function mapStateToProps(state) {
   return {photos: state.photos}
 }
 
-export default connect(mapStateToProps, { fetchPhotos}) (PhotosContainer)
+export default connect(mapStateToProps, { fetchPhotos }) (PhotosContainer)
