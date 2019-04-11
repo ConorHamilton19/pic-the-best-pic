@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ProgressBar from '../components/ProgressBar'
 
 class Rating extends Component {
 
@@ -8,8 +9,7 @@ class Rating extends Component {
     return(
       <div className="RatingCard">
         {this.props.photo.title}
-        {this.props.photo.vote_count}<br></br>
-
+        <ProgressBar percentage={this.props.photo.vote_count} />
       </div>
     )
   }

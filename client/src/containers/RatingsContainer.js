@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { fetchPhotos } from '../actions/photoActions'
 
 
+
 import Ratings from '../components/Ratings'
 
 
@@ -17,6 +18,7 @@ class RatingsContainer extends Component {
   render(){
     return (
       <div className="RatingsContainer">
+      <h1>Voting Results:</h1>
       <Ratings photos={this.props.photos} />
       </div>
 
