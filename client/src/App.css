@@ -41,3 +41,9 @@
   border-radius: inherit;
   transition: width .2s ease-in;
 }
+
+.Navbar {
+  background-color: 	#A9A9A9;
+  text-align: center;
+  padding: 2em
+}

@@ -16,7 +16,6 @@ class Photo extends Component {
     return(
       <div className="PhotoCard">
         {this.props.photo.title} <br></br>
-        {this.props.photo.vote_count}<br></br>
         <button onClick={this.handleClick}> Vote </button>
       </div>
     )
