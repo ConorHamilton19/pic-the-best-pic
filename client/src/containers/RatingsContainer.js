@@ -17,11 +17,15 @@ class RatingsContainer extends Component {
 
   render(){
     return (
+    <div>
       <div className="RatingsContainer">
-      <h1>Voting Results:</h1>
-      <Ratings photos={this.props.photos} />
+        <h2>Voting Results:</h2>
+        <Ratings photos={this.props.photos} />
       </div>
-
+      <div className="OverallRatings">
+      <h2>Last Weeks Winner:</h2>
+      </div>
+    </div>
     )
   }
 }

@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 const link_1 = {
   width: '100px',
   padding: '12px',
-  margin: '0 500px 100px',
+  margin: '0 440px 100px',
   textDecoration: 'underline overline',
   color: 'white',
 }
@@ -22,7 +22,7 @@ const link_2 = {
 
 const Navbar = () =>
   <div className="Navbar">
-    <NavLink
+    <NavLink className="NavTitle"
       to="/"
       exact
       style={link_1}
