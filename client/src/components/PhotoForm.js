@@ -7,13 +7,26 @@ import { Redirect} from 'react-router-dom'
 class PhotoForm extends Component {
 
   state = {
-    photo: '',
+    photo: {
+      title: '',
+      owner: ''
+    },
     redirect: false
   }
 
-  handleChange = (e) => {
+  handleNameChange = (e) => {
     this.setState({
-      photo: e.target.value
+      photo: {
+        title: e.target.value
+      }
+    })
+  }
+
+  handleOwnerChange = (e) => {
+    this.setState({
+      photo: {
+        ...this.state.photo, owner: e.target.value
+      }
     })
   }
 
@@ -37,7 +50,9 @@ class PhotoForm extends Component {
       <h1>Add a pic!</h1>
       <form onSubmit={this.handleSubmit}>
       <label>Enter Photo Name:</label>
-      <input type="text" value={this.state.photo} onChange={this.handleChange} />
+      <input type="text" value={this.state.photo.title} onChange={this.handleNameChange} /> <br></br>
+      <label>Enter Owner Name:</label>
+      <input type="text" value={this.state.photo.owner} onChange={this.handleOwnerChange} /><br></br>
       <input type="submit"/>
       </form>
       </div>
