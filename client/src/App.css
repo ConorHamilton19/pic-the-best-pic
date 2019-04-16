@@ -59,6 +59,8 @@
 }
 
 .Navbar {
+  border-radius: 10px;
+  border: 1px solid #333;
   background-color: 	#A9A9A9;
   text-align: center;
   padding: 1em;

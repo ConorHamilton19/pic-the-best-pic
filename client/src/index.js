@@ -2,12 +2,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import App from './App'
+import PhotoForm from './components/PhotoForm'
+import Navbar from './components/Navbar'
 
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose} from 'redux'
 import thunk from 'redux-thunk'
 import rootReducer from './reducers/index'
-import { BrowserRouter} from 'react-router-dom'
+import { BrowserRouter, Route} from 'react-router-dom'
 
 
 const store = createStore(
@@ -20,9 +22,13 @@ const store = createStore(
 
 ReactDOM.render(
     <Provider store={store} >
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
+      <BrowserRouter>
+      <React.Fragment>
+        <Navbar />
+        <Route exact path="/" component={App} />
+        <Route exact path="/photoform" component={PhotoForm} />
+      </React.Fragment>
+    </BrowserRouter>
     </Provider>,
     document.getElementById('root')
 );
