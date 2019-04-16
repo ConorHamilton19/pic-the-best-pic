@@ -47,14 +47,16 @@ class PhotoForm extends Component {
 
     return(
       <div className="PhotoForm">
-      <h1>Add a pic!</h1>
-      <form onSubmit={this.handleSubmit}>
-      <label>Enter Photo Name:</label>
-      <input type="text" value={this.state.photo.title} onChange={this.handleNameChange} /> <br></br>
-      <label>Enter Owner Name:</label>
-      <input type="text" value={this.state.photo.owner} onChange={this.handleOwnerChange} /><br></br>
-      <input type="submit"/>
-      </form>
+        <h1>Add a pic!</h1>
+        <form onSubmit={this.handleSubmit}>
+          <label>Enter Photo Name:</label>
+            <input type="text"
+                 value={this.state.photo.title} onChange={this.handleNameChange} /> <br></br>
+          <label>Enter Owner Name:</label>
+            <input type="text"
+                 value={this.state.photo.owner} onChange={this.handleOwnerChange} /><br></br>
+            <input type="submit"/>
+        </form>
       </div>
     )
   }

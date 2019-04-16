@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_04_164406) do
+ActiveRecord::Schema.define(version: 2019_04_16_191934) do
 
   create_table "photos", force: :cascade do |t|
     t.string "title"
     t.string "owner"
     t.integer "vote_count", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "winners", force: :cascade do |t|
+    t.string "title"
+    t.string "owner"
+    t.integer "vote_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
