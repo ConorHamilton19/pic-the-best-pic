@@ -28,3 +28,19 @@ export function increaseVote(photo) {
             })
     }
 }
+
+export function addPhoto(photo) {
+  console.log(photo)
+
+    return function (dispatch) {
+        dispatch({ type: 'LOADING_PHOTOS' })
+        return fetch(`http://localhost:3000/api/v1/photos`, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(photo)
+            })
+}
+}
