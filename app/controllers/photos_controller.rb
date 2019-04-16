@@ -17,6 +17,7 @@ class PhotosController < ApplicationController
   def update
     photo = Photo.find(params[:id])
     photo.update(photo_params)
+    photo.vote_count > 100 ? Winner.create(title: photo.title, owner: photo.owner, vote_count: photo.vote_count) : nil
     render json: photo
   end
 

@@ -5,12 +5,8 @@ class WinnersController < ApplicationController
   end
 
   def create
-    winner = Photo.create(winner_params)
+    winner = Photo.create(title, owner, vote_count)
     render json: winner
   end
 
-  private
-    def winner_params
-      params.require(:photo).permit(:id, :title, :owner, :vote_count)
-    end
-end 
+end
