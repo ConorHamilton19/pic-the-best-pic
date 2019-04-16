@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchPhotos } from '../actions/photoActions'
+import { fetchPhotos, fetchWinner } from '../actions/photoActions'
 
 
-
+import Winner from '../components/Winner'
 import Ratings from '../components/Ratings'
 
 
@@ -12,6 +12,7 @@ class RatingsContainer extends Component {
   componentDidMount() {
   if (this.props.photos.length === 0) {
     this.props.fetchPhotos()
+    this.props.fetchWinner()
   }
 }
 
@@ -24,6 +25,7 @@ class RatingsContainer extends Component {
       </div>
       <div className="OverallRatings">
       <h2>Last Weeks Winner:</h2>
+        <Winner winner={this.props.winner} />
       </div>
     </div>
     )
@@ -31,7 +33,8 @@ class RatingsContainer extends Component {
 }
 
 function mapStateToProps(state) {
-  return {photos: state.photos}
+  return {photos: state.photos,
+          winner: state.winner}
 }
 
-export default connect(mapStateToProps, { fetchPhotos }) (RatingsContainer)
+export default connect(mapStateToProps, { fetchPhotos, fetchWinner }) (RatingsContainer)

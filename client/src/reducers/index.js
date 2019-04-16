@@ -1,5 +1,6 @@
 const initialState = {
     photos: [],
+    winnner:[],
     loading: false
   }
 
@@ -11,7 +12,10 @@ const initialState = {
         return Object.assign({}, state, { loading: true })
 
         case 'FETCH_PHOTOS':
-        return {photos: action.payload}
+        return {...state, photos: action.payload}
+
+        case 'FETCH_WINNER':
+        return {...state, winner: action.payload}
 
         // case "INCREASE_VOTE":
         // return {

@@ -1,6 +1,6 @@
 class WinnersController < ApplicationController
   def index
-    winners = Winner.last
+    winner = Winner.last
     render json: winner
   end
 
