@@ -15,7 +15,6 @@ const initialState = {
         return {...state, photos: action.payload}
 
         case 'FETCH_WINNER':
-        console.log(action.payload)
         return {...state, winner: action.payload}
 
         // case "INCREASE_VOTE":

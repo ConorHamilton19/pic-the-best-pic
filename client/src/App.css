@@ -18,13 +18,13 @@
 .RatingsContainer {
   display:block;
   float:left;
-  width:50%;
+  width:40%;
   height:150px;
   padding: 10px;
 }
 
 .OverallRatings {
-  display:block;
+  display:float;
   float:right;
   width:50%;
   height:150px;

@@ -39,7 +39,6 @@ class RatingsContainer extends Component {
   }
 
   render(){
-    console.log(this.props.winner)
     return (
     <div>
       {this.state.loaded ? this.content() : null}
