@@ -8,7 +8,7 @@ class Photo extends Component {
     e.preventDefault()
     this.props.photo.vote_count += 1
     this.props.increaseVote(this.props.photo)
-    this.props.fetchPhotos()
+    .then(this.props.fetchPhotos())
   }
 
   render() {

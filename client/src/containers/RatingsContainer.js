@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchPhotos, fetchWinner } from '../actions/photoActions'
+import { fetchWinner } from '../actions/photoActions'
 
 
 import Winner from '../components/Winner'
@@ -9,24 +9,40 @@ import Ratings from '../components/Ratings'
 
 class RatingsContainer extends Component {
 
-  componentDidMount() {
-  if (this.props.photos.length === 0) {
-    this.props.fetchPhotos()
-    this.props.fetchWinner()
-  }
-}
 
-  render(){
-    return (
-    <div>
+  constructor(props) {
+    super(props)
+    this.state = {
+      loaded: false
+    }
+  }
+
+
+  async componentDidMount() {
+      await this.props.fetchWinner()
+      this.setState({loaded: true})
+    }
+
+  content() {
+    return(
+      <div>
       <div className="RatingsContainer">
         <h2>Voting Results:</h2>
         <Ratings photos={this.props.photos} />
       </div>
       <div className="OverallRatings">
       <h2>Last Weeks Winner:</h2>
-        <Winner winner={this.props.winner} />
+         <Winner winner={this.props.winner} />
       </div>
+      </div>
+    )
+  }
+
+  render(){
+    console.log(this.props.winner)
+    return (
+    <div>
+      {this.state.loaded ? this.content() : null}
     </div>
     )
   }
@@ -37,4 +53,4 @@ function mapStateToProps(state) {
           winner: state.winner}
 }
 
-export default connect(mapStateToProps, { fetchPhotos, fetchWinner }) (RatingsContainer)
+export default connect(mapStateToProps, { fetchWinner }) (RatingsContainer)
