@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchWinner } from '../actions/photoActions'
+import { Link } from 'react-router-dom'
 
 
 import Winner from '../components/Winner'
@@ -32,7 +33,8 @@ class RatingsContainer extends Component {
       </div>
       <div className="OverallRatings">
       <h2>Most Recent Winner:</h2>
-         <Winner winner={this.props.winner} />
+         <Winner winners={this.props.winners} />
+         <p><Link to="/winners">List of All Winners</Link></p>
       </div>
       </div>
     )
