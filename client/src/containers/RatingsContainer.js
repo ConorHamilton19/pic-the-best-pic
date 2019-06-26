@@ -31,7 +31,7 @@ class RatingsContainer extends Component {
         <Ratings photos={this.props.photos} />
       </div>
       <div className="OverallRatings">
-      <h2>Last Weeks Winner:</h2>
+      <h2>Most Recent Winner:</h2>
          <Winner winner={this.props.winner} />
       </div>
       </div>

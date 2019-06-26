@@ -1,6 +1,6 @@
 const initialState = {
     photos: [],
-    winnner:[],
+    winner:[],
     loading: false
   }
 
