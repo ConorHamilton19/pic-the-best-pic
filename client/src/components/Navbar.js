@@ -28,7 +28,7 @@ const Navbar = () =>
 
     >Pic The Best Pic</NavLink>
     <NavLink
-      to="/photoform"
+      to="/photo/new"
       exact
       style={link_2}
       activeStyle={{

@@ -26,7 +26,7 @@ ReactDOM.render(
       <React.Fragment>
         <Navbar />
         <Route exact path="/" component={App} />
-        <Route exact path="/photoform" component={PhotoForm} />
+        <Route exact path="/photo/new" component={PhotoForm} />
       </React.Fragment>
     </BrowserRouter>
     </Provider>,
