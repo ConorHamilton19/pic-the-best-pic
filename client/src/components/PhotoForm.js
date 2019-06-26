@@ -17,7 +17,7 @@ class PhotoForm extends Component {
   handleNameChange = (e) => {
     this.setState({
       photo: {
-        title: e.target.value
+        ...this.state.photo, title: e.target.value
       }
     })
   }

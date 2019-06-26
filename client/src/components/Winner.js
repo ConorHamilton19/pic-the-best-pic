@@ -4,9 +4,11 @@ class Winner extends Component {
 
   render(){
 
+    
+
     return (
       <div className="Winner">
-        
+
       </div>
 
     )
