@@ -1,7 +1,7 @@
 class WinnersController < ApplicationController
   def index
-    winner = Winner.last
-    render json: winner
+    winners = Winner.all
+    render json: winners
   end
 
   def create

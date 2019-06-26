@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom'
 import App from './App'
 import PhotoForm from './components/PhotoForm'
 import Navbar from './components/Navbar'
+import Winners from './components/Winners'
 
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose} from 'redux'
@@ -27,6 +28,7 @@ ReactDOM.render(
         <Navbar />
         <Route exact path="/" component={App} />
         <Route exact path="/photo/new" component={PhotoForm} />
+        <Route exact path="/winners" component={Winners} />
       </React.Fragment>
     </BrowserRouter>
     </Provider>,

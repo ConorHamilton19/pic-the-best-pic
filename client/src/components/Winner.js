@@ -6,7 +6,7 @@ class Winner extends Component {
 
     return (
       <div className="Winner">
-        <h2> {this.props.winner.title}</h2>
+        
       </div>
 
     )

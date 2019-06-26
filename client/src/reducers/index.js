@@ -1,6 +1,6 @@
 const initialState = {
     photos: [],
-    winner:[],
+    winners:[],
     loading: false
   }
 
@@ -15,7 +15,7 @@ const initialState = {
         return {...state, photos: action.payload}
 
         case 'FETCH_WINNER':
-        return {...state, winner: action.payload}
+        return {...state, winners: action.payload}
 
         // case "INCREASE_VOTE":
         // return {
