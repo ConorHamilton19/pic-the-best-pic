@@ -51,7 +51,7 @@ class RatingsContainer extends Component {
 
 function mapStateToProps(state) {
   return {photos: state.photos,
-          winner: state.winner}
+          winners: state.winners}
 }
 
 export default connect(mapStateToProps, { fetchWinner }) (RatingsContainer)
