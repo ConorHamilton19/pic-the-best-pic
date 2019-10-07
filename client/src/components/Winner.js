@@ -8,7 +8,7 @@ class Winner extends Component {
 
     return (
       <div className="Winner">
-        {Winner}
+        {Winner[0]}
       </div>
 
     )
