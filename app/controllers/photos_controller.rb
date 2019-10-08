@@ -29,6 +29,6 @@ class PhotosController < ApplicationController
 
   private
     def photo_params
-      params.require(:photo).permit(:id, :title, :owner, :vote_count)
+      params.require(:photo).permit(:id, :title, :owner, :vote_count, :picture)
     end
 end
