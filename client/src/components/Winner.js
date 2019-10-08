@@ -10,7 +10,6 @@ class Winner extends Component {
       <div className="Winner">
         {Winner[0]}
       </div>
-
     )
   }
 }

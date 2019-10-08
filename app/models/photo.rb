@@ -1,4 +1,4 @@
 class Photo < ApplicationRecord
-  validates :title, presence: true
-  validates :owner, presence: true
+  validates :title, presence: { message: "Can't be blank" }
+  validates :owner, presence: { message: "Can't be blank" }
 end
