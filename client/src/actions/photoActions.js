@@ -47,11 +47,11 @@ export function addPhoto(photo) {
     return function (dispatch) {
         return fetch(`http://localhost:3000/api/v1/photos`, {
           method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(photo)
+          // headers: {
+          //  'Accept': 'application/json',
+        //    'Content-Type': 'application/json'
+          //},
+          body: photo
             })
           }
 }
