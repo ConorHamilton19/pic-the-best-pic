@@ -50,8 +50,8 @@ export function addPhoto(photo) {
           // headers: {
           //  'Accept': 'application/json',
         //    'Content-Type': 'application/json'
-          //},
+           //},
           body: photo
-            })
+        })
           }
 }

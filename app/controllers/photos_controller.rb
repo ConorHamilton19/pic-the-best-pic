@@ -1,7 +1,7 @@
 class PhotosController < ApplicationController
   def index
-    photos = Photo.order("RANDOM()").limit(4)
-    render json: photos
+    @photos = Photo.order("RANDOM()").limit(4)
+    render json: @photos.with_attached_picture
   end
 
   def show

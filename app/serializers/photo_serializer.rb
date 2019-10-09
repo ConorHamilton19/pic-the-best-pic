@@ -3,7 +3,7 @@ class PhotoSerializer < ActiveModel::Serializer
 
 attributes :id, :title, :owner, :vote_count, :picture
 
-def image
+def picture
   return unless object.picture.attached?
 
   object.picture.blob.attributes
@@ -15,4 +15,5 @@ end
 def picture_url
   url_for(object.picture)
 end
+
 end
