@@ -1,6 +1,7 @@
 
 .PhotoCard {
-   margin: 130px;
+
+   margin: 20px;
    display:inline-block;
    vertical-align:text-top
 }
@@ -68,4 +69,9 @@
 
 .NavTitle {
   font-size: 2em
+}
+
+.pic-tile {
+    width: 500px;
+    height: auto;
 }
