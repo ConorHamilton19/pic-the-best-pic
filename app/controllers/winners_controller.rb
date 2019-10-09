@@ -1,6 +1,6 @@
 class WinnersController < ApplicationController
   def index
-    winners = Winner.all
+    winners = Winner.all.order("vote_count DESC")
     render json: winners.with_attached_picture
   end
 
