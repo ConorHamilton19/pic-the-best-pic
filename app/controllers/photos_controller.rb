@@ -1,7 +1,7 @@
 class PhotosController < ApplicationController
   def index
-    @photos = Photo.order("RANDOM()").limit(4)
-    render json: @photos.with_attached_picture
+    photos = Photo.order("RANDOM()").limit(4)
+    render json: photos.with_attached_picture
   end
 
   def show
@@ -17,7 +17,7 @@ class PhotosController < ApplicationController
   def update
     photo = Photo.find(params[:id])
     photo.update(photo_params)
-    photo.vote_count > 100 ? Winner.create(title: photo.title, owner: photo.owner, vote_count: photo.vote_count) : nil
+    photo.vote_count > 100 ? Winner.create(title: photo.title, owner: photo.owner, vote_count: photo.vote_count, picture: photo.picture) : nil
     render json: photo
   end
 
