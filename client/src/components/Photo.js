@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { increaseVote, fetchPhotos } from '../actions/photoActions'
+import { increaseVote, fetchPhotos, fetchWinner } from '../actions/photoActions'
 
 class Photo extends Component {
 
@@ -9,6 +9,7 @@ class Photo extends Component {
     this.props.photo.vote_count += 1
     this.props.increaseVote(this.props.photo)
     .then(this.props.fetchPhotos())
+    .then(this.props.fetchWinner())
   }
 
   render() {
@@ -23,4 +24,4 @@ class Photo extends Component {
   }
 }
 
-export default connect(null, { increaseVote, fetchPhotos }) (Photo)
+export default connect(null, { increaseVote, fetchPhotos, fetchWinner }) (Photo)

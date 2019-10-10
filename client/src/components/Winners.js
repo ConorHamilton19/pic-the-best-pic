@@ -16,7 +16,7 @@ class Winners extends Component {
 
     return (
       <div className="Winners">
-        <ul> {Wins}</ul>
+        <ol> {Wins}</ol>
       </div>
 
     )
