@@ -12,11 +12,13 @@ class Winners extends Component {
 
   render(){
 
-      const Wins = this.props.winners.map((winner, index) => (<li key={index}> <img className="pic-tile" src={winner.picture.url} alt="pics"/></li>))
+      const Wins = this.props.winners.map((winner, index) => (<li key={index}> <img className="picwins-tile" src={winner.picture.url} alt="pics"/><div className="pic-title"> "{winner.title}" by {winner.owner}</div></li>))
 
     return (
       <div className="Winners">
+        All Past Winners:
         <ol> {Wins}</ol>
+
       </div>
 
     )

@@ -75,3 +75,30 @@
     width: 500px;
     height: auto;
 }
+
+.picwin-tile {
+    width: 500px;
+    height: auto;
+}
+
+.picwins-tile {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.Winners {
+  font-size: 3em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.pic-title {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  margin-bottom: 50px;
+}
