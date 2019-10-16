@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Dropzone from 'react-dropzone'
 import { connect } from 'react-redux'
 import { addPhoto} from '../actions/photoActions'
+import { fetchPhotos } from '../actions/photoActions'
 import { Redirect} from 'react-router-dom'
 
 
@@ -50,6 +51,7 @@ class PhotoForm extends Component {
     photo.append('[photo]owner', this.state.photo.owner)
     photo.append('[photo]picture', this.state.photo.picture)
     this.props.addPhoto(photo)
+    this.props.fetchPhotos()
     this.setState({
       redirect: true
     })
@@ -82,7 +84,7 @@ class PhotoForm extends Component {
                <div {...getRootProps()}>
                  <input {...getInputProps()} />
                {this.state.photo.picture !== null ? "File Uploaded" :
-               "Click to Upload Pic" }
+               "Click here to Upload Pic" }
                </div>
              )}
            </Dropzone>
@@ -95,4 +97,4 @@ class PhotoForm extends Component {
   }
 }
 
-export default connect(null, { addPhoto }) (PhotoForm)
+export default connect(null, { addPhoto, fetchPhotos }) (PhotoForm)
