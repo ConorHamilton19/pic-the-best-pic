@@ -24,7 +24,9 @@ class PhotosController < ApplicationController
       winner.vote_count = photo.vote_count
       winner.save
     elsif photo.vote_count > 25
-      Winner.create(title: photo.title, owner: photo.owner, vote_count: photo.vote_count, picture: photo.picture)
+      winner = Winner.create(title: photo.title, owner: photo.owner, vote_count: photo.vote_count, picture: photo.picture)
+      winner.picture.attach(photo.picture.blob)
+      winner.save
     else
       nil
     end
