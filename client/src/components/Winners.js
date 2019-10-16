@@ -12,7 +12,7 @@ class Winners extends Component {
 
   render(){
 
-      const Wins = this.props.winners.map((winner, index) => (<li key={index}> <img className="picwins-tile" src={winner.picture.url} alt="pics"/><div className="pic-title"> "{winner.title}" by {winner.owner}</div></li>))
+      const Wins = this.props.winners.map((winner, index) => (<li key={index}> <img className="picwins-tile" src={winner.picture.url} alt="pics"/><div className="pic-title"> "{winner.title}" by {winner.owner} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Votes:{winner.vote_count}</div></li>))
 
     return (
       <div className="Winners">

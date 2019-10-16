@@ -17,7 +17,7 @@ class Photo extends Component {
     return(
       <div className="PhotoCard">
 
-        {this.props.photo.title} by {this.props.photo.owner} <br></br>
+        "{this.props.photo.title}" by {this.props.photo.owner} <br></br>
       <button onClick={this.handleClick}> <img className="pic-tile" src={this.props.photo.picture.url} alt="pics"/> </button>
       </div>
     )
