@@ -19,8 +19,7 @@ class PhotosController < ApplicationController
   def update
     photo = Photo.find(params[:id])
     photo.update(photo_params)
-    if photo.vote_count > 25 && Winner.find_by(id: photo.id)
-      winner = Winner.find_by(id: photo.id)
+    if photo.vote_count > 25 && winner= Winner.find_by(title: photo.title)
       winner.vote_count = photo.vote_count
       winner.save
     elsif photo.vote_count > 25
