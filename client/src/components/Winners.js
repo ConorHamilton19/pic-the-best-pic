@@ -4,11 +4,9 @@ import { fetchWinner } from '../actions/photoActions'
 
 class Winners extends Component {
 
-
   async componentDidMount() {
       this.props.fetchWinner()
     }
-
 
   render(){
 
@@ -18,9 +16,7 @@ class Winners extends Component {
       <div className="Winners">
         All Past Winners:
         <ol> {Wins}</ol>
-
       </div>
-
     )
   }
 }

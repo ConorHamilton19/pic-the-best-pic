@@ -3,7 +3,6 @@ import ProgressBar from '../components/ProgressBar'
 
 class Rating extends Component {
 
-
   render() {
 
     return(

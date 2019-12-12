@@ -3,13 +3,10 @@ import { connect } from 'react-redux'
 import { fetchWinner } from '../actions/photoActions'
 import { Link } from 'react-router-dom'
 
-
 import Winner from '../components/Winner'
 import Ratings from '../components/Ratings'
 
-
 class RatingsContainer extends Component {
-
 
   constructor(props) {
     super(props)
@@ -17,7 +14,6 @@ class RatingsContainer extends Component {
       loaded: false
     }
   }
-
 
   async componentDidMount() {
       await this.props.fetchWinner()

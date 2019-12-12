@@ -14,5 +14,4 @@ class Winner extends Component {
   }
 }
 
-
 export default Winner

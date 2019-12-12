@@ -1,7 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 
-
 const link_1 = {
   width: '100px',
   padding: '12px',
